@@ -12,6 +12,18 @@ function counter(state = { value: 0 }, action) {
   }
 }
 
-const store = createStore(counter, { value: 0 });
+export const getValue = store => ({
+  value: store.value
+});
+
+const initialState = {
+  value: 0
+};
+
+const store = createStore(
+  counter,
+  initialState,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 export default store;
