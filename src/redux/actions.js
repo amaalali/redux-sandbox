@@ -1,7 +1,13 @@
-import { INCREMENT } from "./actionTypes";
+import actionType from "./actionTypes";
 
 export function increment() {
   return {
-    type: "INCREMENT"
+    type: actionType.INCREMENT
+  };
+}
+
+export function decrement() {
+  return {
+    type: actionType.DECREMENT
   };
 }
